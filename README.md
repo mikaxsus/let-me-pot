@@ -1,8 +1,9 @@
 # let-me-pot
 
+* Forked and fixed BigInt issues
+* Last updated: 03/12/2018
+
 Version: 0.1.4
-*Forked and fixed BigInt issues
-*Last updated: 03/12/2018
 
 Auto HP/MP Pot module for Tera Proxy.
 
