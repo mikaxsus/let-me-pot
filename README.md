@@ -1,6 +1,6 @@
 # let-me-pot
 
-* Forked and fixed BigInt issues
+* Fixed BigInt issues
 * Last updated: 03/12/2018
 
 Version: 0.1.4
