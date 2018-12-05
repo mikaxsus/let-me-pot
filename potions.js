@@ -41,6 +41,16 @@ module.exports = [
         id: 0,
         invQtd: 0
     },
+    {
+    	item: 111,
+    	name: "Rejuvenation Potion",
+    	cd: 30,
+    	hp: true,
+    	use_at: 20,
+    	inCd: false,
+    	id: 0,
+    	invQtd: 0
+    },
 
     // MP
     {
@@ -48,7 +58,7 @@ module.exports = [
         name: "Prime Replenishment Potable",
         cd: 10,
         hp: false,
-        use_at: 50,
+        use_at: 40,
         inCd: false,
         id: 0,
         invQtd: 0

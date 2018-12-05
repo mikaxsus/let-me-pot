@@ -1,6 +1,7 @@
 /**
- * Version: 0.1.3
+ * Version: 0.1.4
  * Made by Loggeru
+ * Edit by shit-reap
  */
 
 const AUTOMANA = true,                  // true - Activates the auto-mana potion function / false - Deactivates
@@ -58,9 +59,9 @@ module.exports = function LetMePot(dispatch) {
         oW = event.w;
     });
 
-    dispatch.hook('S_USER_STATUS', 1, (event) => {
-        if (event.target.equals(oCid)) {
-            oInCombat = (event.status == 1) ? true : false;
+    dispatch.hook('S_USER_STATUS', 3, (event) => {
+        if (event.gameId === oCid) {
+            oInCombat = (Number(event.status) == 1) ? true : false;
         }
     });
 
@@ -85,7 +86,7 @@ module.exports = function LetMePot(dispatch) {
     });
 
     dispatch.hook('C_USE_ITEM', 3, { order: -10 }, (event) => {
-        if (getPotInfo == true && event.gameId.equals(oCid)) {
+        if (getPotInfo == true && event.gameId === oCid) {
             message('Potion info: { item: ' + event.id + ' }');
             getPotInfo = false;
         }
@@ -95,9 +96,9 @@ module.exports = function LetMePot(dispatch) {
 
         if (!enabled || !AUTOHP) return;
 
-        if (event.target.equals(oCid)) {
-            oHp = Math.round(event.curHp / event.maxHp * 100);
-            (event.curHp <= 0) ? oAlive = false : oAlive = true;
+        if (event.target === oCid) {
+            oHp = Math.round(Number(event.curHp) / Number(event.maxHp) * 100);
+            if (Number(event.curHp) <= 0) oAlive = false;
             for (let i = 0; i < hpPotList.length; i++) {
                 if (oHp <= hpPotList[i].use_at && hpPotList[i].inCd == false && hpPotList[i].invQtd > 0 && oInCombat == true && oAlive == true) {
                     useItem(hpPotList[i]);
@@ -109,14 +110,13 @@ module.exports = function LetMePot(dispatch) {
                 }
             }
         }
-
     });
 
     dispatch.hook('S_PLAYER_CHANGE_MP', 1, (event) => {
 
         if (!enabled || !AUTOMANA) return;
 
-        if (event.target.equals(oCid)) {
+        if (event.target === oCid) {
             oMana = Math.round(event.currentMp / event.maxMp * 100);
             for (let i = 0; i < manaPotList.length; i++) {
                 if (oMana <= manaPotList[i].use_at && manaPotList[i].inCd == false && manaPotList[i].invQtd > 0 && oInCombat == true && oAlive == true) {
