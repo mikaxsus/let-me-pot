@@ -1,12 +1,12 @@
 # let-me-pot
 
-Version: 0.1.4
+* Fixed nextgen issues
+* Last updated: 11/12/2018
+
+Version: 0.1.5
 
 Auto HP/MP Pot module for Tera Proxy.
 
-Still need some tests. If you find any bug just let me know.
-
-**Need _Command_ module by Pinkie to work.**
 
 ## Done
  * Auto HP Potion usage, configurable options:
