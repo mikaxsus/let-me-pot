@@ -1,4 +1,11 @@
 {
+	"files": {
+		"index.js": "9acfff965bbd25e8d6d10992c636bd2b61542df29f7f0eeda96c594607f0eafb",
+		"manifest.json": "3b1f603819365a05c7ea8052908e18f35c0ef378dfc2760477c7ef87a8af7128",
+		"module.json": "d363d38d9907d76fa688c2ddcdcfa25b3bcc72a4ae27d3946bd480fc3b8028fe",
+		"potions.js": "3b5ccef3f15fe299426564acfddbfb8b50a850f3d7c2e1572cec3930b386e920",
+		"README.md": "bb65f8615d6f8e3147f35e0aec9c3bdbca0d76a5176e24a3311206f253aac6ce"
+	},
 	"defs":{
 		"C_PLAYER_LOCATION": 5,
 		"C_USE_ITEM": 3,
