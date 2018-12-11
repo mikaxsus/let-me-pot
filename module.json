@@ -8,6 +8,6 @@
 	"options": {
 		"letmepot": "Enable/Disable",
 		"getpotinfo": "Get last used pot id/info",
-	}
+	},
 	"servers": ["https://raw.githubusercontent.com/mikaxsus/let-me-pot/master/"]
 }
