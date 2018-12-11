@@ -1,5 +1,5 @@
 /**
- * Version: 0.1.4
+ * Version: 0.1.5
  * Made by Loggeru
  * Edit by shit-reap
  */
@@ -13,11 +13,11 @@ const AUTOMANA = true,                  // true - Activates the auto-mana potion
  *     DON'T CHANGE NOTHING BELOW THIS LINE
  */
 
-const potions = require('./potions'),
-    Command = require('command');
+const potions = require('./potions');
+    //Command = require('command');
 
 module.exports = function LetMePot(dispatch) {
-    const command = Command(dispatch);
+    //const command = Command(dispatch);
 
     let enabled = true,
         oCid = null,
@@ -37,12 +37,12 @@ module.exports = function LetMePot(dispatch) {
     hpPotList.sort(function (a, b) { return parseFloat(a.use_at) - parseFloat(b.use_at); });
     manaPotList.sort(function (a, b) { return parseFloat(a.use_at) - parseFloat(b.use_at); });
 
-    command.add('getpotinfo', () => {
+    dispatch.command.add('getpotinfo', () => {
         getPotInfo = true;
         message('Use the potion you want and watch the infos in proxy console.', true);
     });
 
-    command.add('letmepot', () => {
+    dispatch.command.add('letmepot', () => {
         enabled = !enabled;
         let txt = (enabled) ? 'ENABLED' : 'DISABLED';
         message('Let Me Pot is ' + txt, true);
@@ -69,14 +69,14 @@ module.exports = function LetMePot(dispatch) {
         if (!enabled) return; // Too much info, better just turn off if disabled
 
         let tempInv = event.items;
-        for (i = 0; i < tempInv.length; i++) {
-            for (o = 0; o < hpPotList.length; o++) {
+        for (let i = 0; i < tempInv.length; i++) {
+            for (let o = 0; o < hpPotList.length; o++) {
                 if (hpPotList[o].item == tempInv[i].id) {
                     hpPotList[o].invQtd = tempInv[i].amount;
                     hpPotList[o].id = tempInv[i].dbid;
                 }
             }
-            for (p = 0; p < manaPotList.length; p++) {
+            for (let p = 0; p < manaPotList.length; p++) {
                 if (manaPotList[p].item == tempInv[i].id) {
                     manaPotList[p].invQtd = tempInv[i].amount;
                     manaPotList[p].id = tempInv[i].dbid;
@@ -151,9 +151,9 @@ module.exports = function LetMePot(dispatch) {
 
     function message(msg, chat = false) {
         if (chat == true) {
-            command.message('(Let Me Pot) ' + msg);
+            dispatch.command.message('(Let Me Pot) ' + msg);
         } else {
-            console.log('(Let Me Pot) ' + msg);
+            dispatch.log('(Let Me Pot) ' + msg);
         }
     }
 }
