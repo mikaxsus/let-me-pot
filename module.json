@@ -4,9 +4,5 @@
 	"fork": "mikaxsus",
 	"description": "Auto potter.",
 	"version": "0.1.5",
-	"options": {
-		"letmepot": "Enable/Disable",
-		"getpotinfo": "Get last used pot id/info",
-	},
 	"servers": ["https://raw.githubusercontent.com/mikaxsus/let-me-pot/master/"]
 }
