@@ -1,18 +1,18 @@
 {
   "files": {
-		"index.js": "9acfff965bbd25e8d6d10992c636bd2b61542df29f7f0eeda96c594607f0eafb",
+		"index.js": "df01c61ab0e6eeb66c0cc68732ef4297268e3048b5de989ead5633c77d22a0f3",
 		"module.json": "fd1bb628b7a24f113818140d55dd21969920c2fe92081c9172542400bcd711d0",
 		"potions.js": "3b5ccef3f15fe299426564acfddbfb8b50a850f3d7c2e1572cec3930b386e920",
-		"README.md": "bb65f8615d6f8e3147f35e0aec9c3bdbca0d76a5176e24a3311206f253aac6ce"
+		"README.md": "13716bca691fcfd3359012ee197b4787982914250d5fe51912bfe1c88dbe3788"
   },
   "defs":{
 		"C_PLAYER_LOCATION": 5,
 		"C_USE_ITEM": 3,
 		"S_CREATURE_CHANGE_HP": 6,
-		"S_INVEN": 12,
-		"S_LOGIN": 10,
+		"S_INVEN": 18,
+		"S_LOGIN": 12,
 		"S_PLAYER_CHANGE_MP": 1,
-		"S_SPAWN_ME": 2,
+		"S_SPAWN_ME": 3,
 		"S_USER_STATUS": 3
 	}
 }

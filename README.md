@@ -1,9 +1,9 @@
 # let-me-pot
 
-* Fixed nextgen issues
-* Last updated: 11/12/2018
+* Updated for latest patch
+* Last updated: 29/03/2019
 
-Version: 0.1.5
+Version: 0.1.6
 
 Auto HP/MP Pot module for Tera Proxy.
 

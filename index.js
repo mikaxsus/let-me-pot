@@ -1,5 +1,5 @@
 /**
- * Version: 0.1.5
+ * Version: 0.1.6
  * Made by Loggeru
  * Edit by shit-reap
  */
@@ -14,10 +14,8 @@ const AUTOMANA = true,                  // true - Activates the auto-mana potion
  */
 
 const potions = require('./potions');
-    //Command = require('command');
 
 module.exports = function LetMePot(dispatch) {
-    //const command = Command(dispatch);
 
     let enabled = true,
         oCid = null,
@@ -48,9 +46,9 @@ module.exports = function LetMePot(dispatch) {
         message('Let Me Pot is ' + txt, true);
     });
 
-    dispatch.hook('S_LOGIN', 10, (event) => { oCid = event.gameId; });
+    dispatch.hook('S_LOGIN', 12, (event) => { oCid = event.gameId; });
 
-    dispatch.hook('S_SPAWN_ME', 2, event => { oAlive = event.alive; });
+    dispatch.hook('S_SPAWN_ME', 3, event => { oAlive = event.alive; });
 
     dispatch.hook('C_PLAYER_LOCATION', 5, { order: -10 }, (event) => {
         oX = (event.loc.x + event.dest.x) / 2;
@@ -65,7 +63,7 @@ module.exports = function LetMePot(dispatch) {
         }
     });
 
-    dispatch.hook('S_INVEN', 12, { order: -10 }, (event) => {
+    dispatch.hook('S_INVEN', 18, { order: -10 }, (event) => {
         if (!enabled) return; // Too much info, better just turn off if disabled
 
         let tempInv = event.items;
