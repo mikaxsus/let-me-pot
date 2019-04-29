@@ -3,6 +3,6 @@
 	"author": "loggeru",
 	"fork": "mikaxsus",
 	"description": "Auto potter.",
-	"version": "0.1.6",
+	"version": "0.1.7",
 	"servers": ["https://raw.githubusercontent.com/mikaxsus/let-me-pot/master/"]
 }

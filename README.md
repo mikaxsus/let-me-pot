@@ -1,9 +1,9 @@
 # let-me-pot
 
 * Updated for latest patch
-* Last updated: 29/03/2019
+* Last updated: 29/04/2019
 
-Version: 0.1.6
+Version: 0.1.7
 
 Auto HP/MP Pot module for Tera Proxy.
 

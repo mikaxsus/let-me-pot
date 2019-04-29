@@ -1,5 +1,5 @@
 /**
- * Version: 0.1.6
+ * Version: 0.1.7
  * Made by Loggeru
  * Edit by shit-reap
  */
@@ -46,7 +46,7 @@ module.exports = function LetMePot(dispatch) {
         message('Let Me Pot is ' + txt, true);
     });
 
-    dispatch.hook('S_LOGIN', 12, (event) => { oCid = event.gameId; });
+    dispatch.hook('S_LOGIN', 13, (event) => { oCid = event.gameId; });
 
     dispatch.hook('S_SPAWN_ME', 3, event => { oAlive = event.alive; });
 
